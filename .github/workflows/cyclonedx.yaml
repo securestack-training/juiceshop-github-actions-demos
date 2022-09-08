@@ -1,0 +1,6 @@
+      - name: Generate CycloneDX SBOM
+        id: cyclonedx-sbom
+        uses: CycloneDX/gh-node-module-generatebom@master
+        with: 
+          output: './app.niftybank.org.cyclonedx.bom.xml'
+          path: './'
