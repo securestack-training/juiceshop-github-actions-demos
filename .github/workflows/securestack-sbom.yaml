@@ -1,3 +1,10 @@
+name: SecureStack SBOM Action
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      
       - name: SecureStack - Application Bill of Materials
         id: sbom
         uses: SecureStackCo/actions-sbom@v0.1.1
@@ -5,3 +12,5 @@
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY_SECRET }}
           securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
+          
+          
