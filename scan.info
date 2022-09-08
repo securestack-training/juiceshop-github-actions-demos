@@ -1,0 +1,3 @@
+with custom config file:  	357.04s user 406.77s system 75% cpu 16:57.21 total
+vanilla: 			338.61s user 433.47s system 74% cpu 17:18.71 total
+bloodhound-cli

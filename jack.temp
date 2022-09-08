@@ -1,0 +1,15 @@
+{
+  "title": "WordPress 4.1-5.8.2 - SQL Injection via WP_Meta_Query",
+  "fixed_in": "5.8.3",
+  "references": {
+    "cve": [
+      "2022-21664"
+    ],
+    "url": [
+      "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-jp3p-gw8h-6x86"
+    ],
+    "wpvulndb": [
+      "24462ac4-7959-4575-97aa-a6dcceeae722"
+    ]
+  }
+}:
