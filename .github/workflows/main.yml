@@ -18,12 +18,4 @@ jobs:
           BH_SEVERITY: ${{ secrets.BH_SEVERITY }}
         run:
           bloodhound-cli code -s -a $BH_APP_ID
- 
-      - name: perform-recon-scan
-        shell: bash
-        env:
-          BH_APP_ID: ${{ secrets.BH_APP_ID }}
-          BH_API_KEY: ${{ secrets.BH_API_KEY }}
-          BH_SEVERITY: ${{ secrets.BH_SEVERITY }}
-        run:
-          bloodhound-cli recon -m -r -a $BH_APP_ID
+
