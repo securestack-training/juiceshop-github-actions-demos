@@ -17,3 +17,39 @@ jobs:
           securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
           severity: critical
           flags: '-d 1 --info'
+          
+name:Perform Bloodhound Scans
+on: [push]
+jobs:
+  Perform-Bloodhound-Scans:
+    runs-on: ubuntu-latest
+    container: securestackau/bloodhound-cli:latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: '0'
+      - name: perform-secret-scan
+        shell: bash
+        env:
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
+        run:
+          bloodhound-cli code -s -a $BH_APP_ID
+      - name: perform-code-scan
+        shell: bash
+        env:
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
+          BH_SCAN_TYPE: node
+        run:
+          bloodhound-cli code -t $BH_SCAN_TYPE -a $BH_APP_ID
+      - name: perform-recon-scan
+        shell: bash
+        env:
+          securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
+          securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
+          BH_SEVERITY: ${{ secrets.BH_SEVERITY }}
+        run:
+          bloodhound-cli recon -m -r -a $BH_APP_ID
