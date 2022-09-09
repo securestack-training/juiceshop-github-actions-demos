@@ -1,4 +1,4 @@
-name: Semgrep CI s can
+name: Semgrep CI scan
 on: push
 jobs:
 
