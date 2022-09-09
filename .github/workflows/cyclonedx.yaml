@@ -1,4 +1,7 @@
-uses: CycloneDX/gh-node-module-generatebom@master
+name: SecureStack SBOM Action
+on: push
+jobs:
+    steps:
 
       - name: Generate CycloneDX SBOM
         id: cyclonedx-sbom
