@@ -1,0 +1,20 @@
+name: Build javascript project & create SBOM
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Install and build javascript
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm test
+      - run: mkdir ./bom_directory/
+      - name: Create SBOM
+        uses: CycloneDX/gh-node-module-generatebom@master
+        with:
+          output: './bom_directory/app.niftybank.org.bom.xml'
+          path: './'
