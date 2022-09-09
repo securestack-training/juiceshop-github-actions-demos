@@ -1,3 +1,7 @@
+name: Semgrep CI s can
+on: push
+jobs:
+
   semgrep:
     name: Scan
     runs-on: ubuntu-20.04
