@@ -1,4 +1,4 @@
-name: SecureStack SBOM Action
+name: CycloneDX SBOM Workflow
 on: push
 jobs:
     steps:
