@@ -11,6 +11,7 @@ jobs:
         uses: projectdiscovery/nuclei-action@main
         with:
           target: https://example.com
+          flags: "-silent -eid http-missing-security-headers"
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
@@ -18,7 +19,3 @@ jobs:
           name: nuclei.log
           path: nuclei.log
 
-      - name: GitHub Security Dashboard Alerts update
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: nuclei.sarif
