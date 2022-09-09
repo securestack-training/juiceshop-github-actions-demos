@@ -1,6 +1,8 @@
 name: CycloneDX SBOM Workflow
 on: push
 jobs:
+  security:
+    runs-on: ubuntu-latest
     steps:
 
       - name: Generate CycloneDX SBOM
