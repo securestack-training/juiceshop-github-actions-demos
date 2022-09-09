@@ -1,7 +1,7 @@
 name: Nuclei - DAST Scan
 on: push
+jobs:
 
- jobs:
   nuclei-scan:
     runs-on: ubuntu-latest
     steps:
