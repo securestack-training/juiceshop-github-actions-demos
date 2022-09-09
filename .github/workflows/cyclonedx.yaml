@@ -1,3 +1,5 @@
+uses: CycloneDX/gh-node-module-generatebom@master
+
       - name: Generate CycloneDX SBOM
         id: cyclonedx-sbom
         uses: CycloneDX/gh-node-module-generatebom@master
