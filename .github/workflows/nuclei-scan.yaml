@@ -11,7 +11,7 @@ jobs:
         uses: projectdiscovery/nuclei-action@main
         with:
           target: https://app.niftybank.org
-          flags: "-silent -eid http-missing-security-headers"
+          flags: "-t http/miscellaneous/security-txt.yaml"
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
