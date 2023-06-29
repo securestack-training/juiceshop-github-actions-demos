@@ -10,8 +10,8 @@ jobs:
       - name: Nuclei - DAST Scan
         uses: projectdiscovery/nuclei-action@main
         with:
-          target: https://app.niftybank.org
-          flags: "-t http/miscellaneous/security-txt.yaml"
+          target: https://app.cheapcryptobank.com
+          flags: "-t http/exposures/files/npmrc-authtoken.yaml"
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
