@@ -1,4 +1,4 @@
-naem: ZAP DAST Scan
+name: ZAP DAST Scan
 on: [push]
 
 jobs:
