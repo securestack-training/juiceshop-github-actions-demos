@@ -6,10 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Scan the webapplication
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout repo
+        id: checkout
+        uses: actions/checkout@v2.4.0
         with:
-          ref: master
+          fetch-depth: 0
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.5.1
         with:
