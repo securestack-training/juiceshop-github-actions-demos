@@ -1,4 +1,5 @@
 name: Trivy Static Analysis
+on: [push]
 jobs:
   build:
     name: build
