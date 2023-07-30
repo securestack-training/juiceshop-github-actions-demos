@@ -13,7 +13,7 @@ jobs:
     - name: "Run asa scanner"
       uses: "bin3xish477/asa@a6f5eb8c20e936c07326a1eb6aa6427b25494045"
       with:
-        dir: "./actions/"
+        dir: "./"
         verbose: true
         no-summary: true
         ignore-checks: 'check_for_inline_script check_for_cache_action_usage'
