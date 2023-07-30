@@ -5,7 +5,7 @@ jobs:
     name: gitleaks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@96f53100ba2a5449eb71d2e6604bbcd94b9449b5
         with:
           fetch-depth: 0
       - uses: gitleaks/gitleaks-action@v2
