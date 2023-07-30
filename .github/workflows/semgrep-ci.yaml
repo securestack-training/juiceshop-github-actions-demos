@@ -8,5 +8,5 @@ jobs:
     container:
       image: returntocorp/semgrep
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@d3511a7d371653093f9527416819704784817957
     - run: semgrep ci
