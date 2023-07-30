@@ -1,4 +1,4 @@
-name: 'Check All GitHub Actions for Security Issues via ASA'
+name: 'Check All GitHub Actions for Security Issues via bin3xish477 ASA'
 on:
   push:
     branches:
