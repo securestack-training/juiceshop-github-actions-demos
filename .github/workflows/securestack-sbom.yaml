@@ -7,7 +7,7 @@ jobs:
       
       - name: SecureStack - Application Bill of Materials
         id: sbom
-        uses: SecureStackCo/actions-sbom@v0.1.1
+        uses: SecureStackCo/actions-sbom@e5c3e7b9928f2ee324d8639d382a43fbfe8e1377
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
           securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
