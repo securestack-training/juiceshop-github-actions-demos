@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 0
       - name: Code Analysis Step
         id: code
-        uses: SecureStackCo/actions-code@v0.1.1
+        uses: SecureStackCo/actions-code@8410d5070a9a33cc87fda2010846cacad286fafa
         with:
           securestack_api_key: ${{ secrets.SECURESTACK_API_KEY }}
           securestack_app_id: ${{ secrets.SECURESTACK_APP_ID }}
