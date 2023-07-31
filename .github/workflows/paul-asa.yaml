@@ -9,4 +9,7 @@ jobs:
       uses: actions/checkout@96f53100ba2a5449eb71d2e6604bbcd94b9449b5 # v3.5.3
     - name: "Run asa scanner"
       uses: "bin3xish477/asa@a6f5eb8c20e936c07326a1eb6aa6427b25494045"
+      with:
+        verbose: true
+        no-summary: true
       continue-on-error: true
