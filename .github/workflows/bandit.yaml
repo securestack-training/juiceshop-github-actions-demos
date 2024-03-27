@@ -1,0 +1,21 @@
+name: Bandit Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rule_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Bandit Scan
+        id: bandit
+        uses: mdegis/bandit-action@v1.0
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            path: "."
+            level: high
+            confidence: high
+            exit_zero: true
