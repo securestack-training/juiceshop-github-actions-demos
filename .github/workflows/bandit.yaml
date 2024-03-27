@@ -13,9 +13,9 @@ jobs:
       - name: Run Bandit Scan
         id: bandit
         uses: mdegis/bandit-action@v1.0
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            path: "."
-            level: high
-            confidence: high
-            exit_zero: true
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: "."
+          level: high
+          confidence: high
+          exit_zero: true
