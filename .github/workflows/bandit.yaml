@@ -18,4 +18,5 @@ jobs:
           path: "/python"
           level: medium
           confidence: medium
+          verbose: true
           #exit_zero: true
