@@ -16,4 +16,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://app.niftybank.org/'
+          target: 'https://app.cheapcryptobank.com/'
