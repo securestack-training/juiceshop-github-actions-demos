@@ -12,7 +12,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@eceb20949194c4d2be3c72cd1bbc6b645e41509d # 0.5.1
+        #uses: zaproxy/action-full-scan@eceb20949194c4d2be3c72cd1bbc6b645e41509d # 0.5.1
+        uses: zaproxy/action-full-scan@v0.10.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
